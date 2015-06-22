@@ -9,9 +9,10 @@ if [ $? -ne 0 ]; then
   git config user.email $GIT_EMAIL
 fi
 
+git checkout $SOURCE_BRANCH
 git fetch origin
 node_modules/.bin/gulp
-git checkout $DEPLOY_BRANCH
+git checkout --orphan $DEPLOY_BRANCH
 mv -f build/* .
 git add -A
 git commit -m "Automatic build"
