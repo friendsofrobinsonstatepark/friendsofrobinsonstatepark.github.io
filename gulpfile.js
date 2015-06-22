@@ -14,6 +14,9 @@ gulp.task('render-jade', function(){
                    .pipe(gulp.dest('./build'));
 });
 
+gulp.task('cname', function () {
+  gulp.src('CNAME').pipe(gulp.dest('./build'));
+});
 gulp.task('styles', function(){
   gulp.src('./less/*.less')
       .pipe(less())
