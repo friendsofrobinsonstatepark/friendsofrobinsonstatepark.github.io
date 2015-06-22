@@ -4,10 +4,10 @@ require('shelljs/global');
 var fs = require('fs');
 var opts = {silent:true};
 
-var CURRENT_BRANCH = exec('git rev-parse --abbrev-ref HEAD',opts).output.trim();
+var CURRENT_BRANCH = 'source';
 console.log('Current branch: '+CURRENT_BRANCH);
 
-var DEPLOY_BRANCH = CURRENT_BRANCH === 'master' ? 'gh-pages' : 'master';
+var DEPLOY_BRANCH = CURRENT_BRANCH === 'master';
 console.log('Deploying to branch: '+DEPLOY_BRANCH);
 
 function sh(cmd) {
