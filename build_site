@@ -11,7 +11,10 @@ var DEPLOY_BRANCH = CURRENT_BRANCH === 'master' ? 'gh-pages' : 'master';
 console.log('Deploying to branch: '+DEPLOY_BRANCH);
 
 function sh(cmd) {
-  return exec(cmd, opts);
+  var o = exec(cmd, opts);
+  console.log('### '+cmd+' ### ($? '+o.code+')');
+  console.log(o.output);
+  return o;
 }
 
 function setGitUser() {
