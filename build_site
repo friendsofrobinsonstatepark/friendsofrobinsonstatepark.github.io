@@ -36,7 +36,7 @@ function publish() {
   sh('git fetch -q');
   sh('git config credential.helper "store --file=.git/credentials"');
   fs.writeFileSync('.git/credentials', 'https://'+process.env.GH_TOKEN+':@github.com');
-  exec('git push '+DEPLOY_BRANCH+' origin/'+DEPLOY_BRANCH);
+  exec('git push -f origin '+([DEPLOY_BRANCH,DEPLOY_BRANCH].join(':')));
   fs.unlinkSync('.git/credentials');
 }
 
