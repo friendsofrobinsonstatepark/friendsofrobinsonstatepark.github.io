@@ -1,7 +1,7 @@
 #!/bin/sh
 
 SOURCE_BRANCH='source'
-DEPLOY_BRANCH='deploy'
+DEPLOY_BRANCH='master'
 
 git config --get user.name
 if [ $? -ne 0 ]; then
