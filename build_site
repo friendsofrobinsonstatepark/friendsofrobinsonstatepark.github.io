@@ -7,7 +7,7 @@ var opts = {silent:true};
 var CURRENT_BRANCH = 'source';
 console.log('Current branch: '+CURRENT_BRANCH);
 
-var DEPLOY_BRANCH = CURRENT_BRANCH === 'master';
+var DEPLOY_BRANCH = 'master';
 console.log('Deploying to branch: '+DEPLOY_BRANCH);
 
 function sh(cmd) {
