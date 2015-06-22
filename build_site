@@ -42,7 +42,7 @@ function publish() {
 
 function render() {
   exec('node_modules/.bin/gulp');
-  sh('git checkout '+DEPLOY_BRANCH);
+  sh('git checkout -b '+DEPLOY_BRANCH+' --track origin/'+DEPLOY_BRANCH);
   sh('ls build');
   sh('mv build/* .');
   sh('git add -A');
