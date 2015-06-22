@@ -18,7 +18,7 @@ git add -A
 git commit -m "Automatic build"
 git checkout $SOURCE_BRANCH
 
-if [ $TRAVIS_PULL_REQUEST -ne 0 ]; then
+if [ $TRAVIS_PULL_REQUEST ]; then
   git remote set-url --push origin https://github.com/friendsofrobinsonstatepark/friendsofrobinsonstatepark.github.io.git
   git remote set-branches --add origin $DEPLOY_BRANCH
   git fetch -q
