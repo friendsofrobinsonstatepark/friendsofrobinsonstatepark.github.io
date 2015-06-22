@@ -11,7 +11,7 @@
     "url": "git://github.com/friendsofrobinsonstatepark/site.git"
   },
   "author": "Ryan Muller <ryan+gh@muller.io>",
-  "license": "CC-BY-SA 4.0",
+  "license": "CC-BY-SA-4.0",
   "bugs": {
     "url": "https://github.com/friendsofrobinsonstatepark/site/issues"
   },
@@ -22,5 +22,8 @@
     "gulp-entity-convert": "0.0.1",
     "gulp-jade": "^0.6.0",
     "gulp-less": "^3.0.3"
+  },
+  "devDependencies": {
+    "shelljs": "^0.5.1"
   }
 }

@@ -1,0 +1,50 @@
+#!/usr/bin/env node
+require('shelljs/global');
+
+var fs = require('fs');
+var opts = {silent:true};
+
+var CURRENT_BRANCH = exec('git rev-parse --abbrev-ref HEAD',opts).output.trim();
+console.log('Current branch: '+CURRENT_BRANCH);
+
+var DEPLOY_BRANCH = CURRENT_BRANCH === 'master' ? 'gh-pages' : 'master';
+console.log('Deploying to branch: '+DEPLOY_BRANCH);
+
+function sh(cmd) {
+  return exec(cmd, opts);
+}
+
+function setGitUser() {
+  if (exec('git config --get user.name').code != 0) {
+    exec('git config user.name '+process.env.GIT_NAME);
+    exec('git config user.email '+process.env.GIT_EMAIL);
+  }
+}
+
+function publish() {
+  var repo = exec('git config remote.origin.url').output.replace(/^git:/, 'https:');
+
+  sh('git remote set-url --push origin '+repo);
+  sh('git remote set-branches --add origin '+DEPLOY_BRANCH);
+  sh('git fetch -q');
+  sh('git config credential.helper "store --file=.git/credentials"');
+  fs.writeFileSync('.git/credentials', 'https://'+process.env.GH_TOKEN+':@github.com');
+  //exec('git branch '+DEPLOY_BRANCH+' origin/'+DEPLOY_BRANCH);
+  fs.unlinkSync('.git/credentials');
+}
+
+function render() {
+  exec('node_modules/.bin/gulp');
+  sh('git checkout '+DEPLOY_BRANCH);
+  sh('mv build/* .');
+  sh('git add -A');
+  sh('git commit -m "Automatic build"');
+  sh('git checkout '+CURRENT_BRANCH);
+}
+
+setGitUser();
+render();
+if (process.env.TRAVIS_PULL_REQUEST > 0) {
+  console.log('Publishing')
+  publish();
+}
