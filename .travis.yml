@@ -3,7 +3,7 @@ node_js:
   - "0.12"
 branches:
   only:
-  - develop
+  - source
 script: ./build_site
 env:
   global:
