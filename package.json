@@ -21,7 +21,8 @@
     "gulp": "^3.8.2",
     "gulp-entity-convert": "0.0.1",
     "gulp-jade": "^0.6.0",
-    "gulp-less": "^3.0.3"
+    "gulp-less": "^3.0.3",
+    "marked": "^0.3.3"
   },
   "devDependencies": {
     "shelljs": "^0.5.1"
