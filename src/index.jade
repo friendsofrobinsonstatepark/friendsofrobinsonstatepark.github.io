@@ -14,20 +14,21 @@ block main
       .col-sm-4
         .index-col
           h2 Events
-          .well
-            h3 Saturday, June 20, 2015: Robinson State Park Day
-            ul
-              li 8 a.m. Bird Walk
-              li 9 a.m. &mdash; 3 p.m. Explore the Tree Bus!
-              li 3 p.m. Canoe cruise ends at Robinson State Park
-              li: strong And a whole lot more!
+          .well: :markdown
+              ### Saturday, June 20, 2015: Robinson State Park Day
+              - 8 a.m. Bird Walk
+              - 9 a.m. &mdash; 3 p.m. Explore the Tree Bus!
+              - 3 p.m. Canoe cruise ends at Robinson State Park
+              - **And a whole lot more!**
+              
             a.btn.btn-success(href='/events.html') Click for details &raquo;
       .col-sm-8
         .index-col
           h2 News
           .well
-            h3 Robinson's biodiversity sighted on Bird Walk
-            p.
+            :markdown
+              ### Robinson's biodiversity sighted on Bird Walk
+
               Steven Svec led a group through the park and
               identified thirty-two different types of bird
               by sight, and another six by ear.
