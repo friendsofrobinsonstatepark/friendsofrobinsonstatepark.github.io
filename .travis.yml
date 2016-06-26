@@ -1,0 +1,10 @@
+language: node_js
+node_js:
+  - "0.12"
+branches:
+  only:
+  - source
+script: ./build.sh
+env:
+  global:
+  - secure: "mxmZHMGpQ+3xna2f9sykSYDh6NF9adMFHOgFwFqPBU+qJ+4TssBF5rsMgxZCCDYJNnOkfqUly9mCP6gWQT6u/WTADzPxTHK4vQprvTy5N/kf6gcW7AZlNe8tAX7BeSc4aL6pCjDXD9ZA3OfTnvSmjuMlXYMVtwSGhJ5/Tv29hkDfjToeNF/4Wl+nNMJEA8X/XgWTkVUwFc8Q4IycjvffW/kO3tCgCHe9dpze0LLbg9lVDNcURL9gqFxs3bnoczAlc4MntMKjWcwj0sIZiJh2cqitSvAvznb/20Wqo7r3EcxweA9BgMfgUor1Do/QtIBLAO8NAScI1xZ2lszDlyV6GkDOeSnSNFsp50IhFQks+jEp1QdAsjNEQAroGM5NSf/lBwT95i7X2eZZr/xR13vV9En3DINAuGaqDpN26sOfS4p/yWClHUTBgO+ywUpZsvP4YG6xsGq2fd210AtQb+Aw6AWm+SIjpSNaCkoD0qgyjK/uILUb4YOAjI2HxHuCDOOBhXnEgcgfFsTU/fQAdRs2A9QXc6uCZKfKMaX1J8ARyNZbU3OvdEusQo3O4MR3z1G4FlEkeWhU5ggLv4UlUgdLiOzduqrQhUSM1StsMTwSVwVjUG9/3Cx/GrxjKZ514YMs+LDVAdq14bXeTBLngeRxa5Hqvrf7Z7O3GGrKFq2QbGM="

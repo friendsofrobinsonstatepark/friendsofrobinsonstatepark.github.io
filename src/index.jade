@@ -1,0 +1,33 @@
+extends layout/index
+
+block link
+  - page = 'home';
+
+block main
+  .gallery
+    .header
+        h1 Welcome to Robinson State Park
+        a.btn.btn-primary.btn-lg(href='/events.html') See what's going on in the park
+    img.art(src='http://upload.wikimedia.org/wikipedia/commons/d/d0/Westfield_River,_Huntington_MA.jpg')
+  .index-body.container-fluid
+    .row
+      .col-sm-4
+        .index-col
+          h2 Events
+          .well
+            :markdown
+              ### Annual Mother's Day Birdwalk
+
+                  Led by John Hutchison.
+            a.btn.btn-success(href='/events.html') Click for details &raquo;
+      .col-sm-8
+        .index-col
+          h2 News
+          .well
+            :markdown
+              ### Robinson's biodiversity sighted on Bird Walk
+
+              Steven Svec led a group through the park and
+              identified thirty-two different types of bird
+              by sight, and another six by ear!
+            a.btn.btn-success(href="/news.html") Learn more &raquo;

@@ -1,0 +1,40 @@
+- function pageAc(cl){ return page===cl?'active':'' }
+- var pages = [{name:'home',title:'Home',href:'/'},{name:'maps',title:'Maps',href:'/maps.html'},{name:'events',title:'Events',href:'/events.html'},{name:'news',title:'News',href:'/news.html'},{name:'about',title:'About',href:'/about.html'}];
+html
+  block link
+    - var page = 'home'
+  head
+    title Friends of Robinson State Park
+    meta(name='viewport', content='width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no')
+    link(href='//maxcdn.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css', rel='stylesheet')
+    link(href='css/style.css', rel='stylesheet')
+    link(rel='shortcut icon', href='/favicon.ico', type='image/x-icon')
+    link(rel='apple-touch-icon', href='/apple-touch-icon.png')
+    link(rel='apple-touch-icon', sizes='57x57', href='/apple-touch-icon-57x57.png')
+    link(rel='apple-touch-icon', sizes='72x72', href='/apple-touch-icon-72x72.png')
+    link(rel='apple-touch-icon', sizes='76x76', href='/apple-touch-icon-76x76.png')
+    link(rel='apple-touch-icon', sizes='115x114', href='/apple-touch-icon-114x114.png')
+    link(rel='apple-touch-icon', sizes='120x120', href='/apple-touch-icon-120x120.png')
+    link(rel='apple-touch-icon', sizes='144x144', href='/apple-touch-icon-144x144.png')
+    link(rel='apple-touch-icon', sizes='152x152', href='/apple-touch-icon-152x152.png')
+    link(rel='stylesheet', href='//netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css')
+    block header
+    style.
+
+  body
+    .banner.header
+      h1: a(href='/') Friends of Robinson State Park
+      h1.mobile Robinson State Park
+      ul.navigation
+        each link in pages
+          li(class=(page===link.name?'active':'')): a(href=link.href)= link.title
+    block main
+    .banner.footer
+      div
+        each page in pages
+          span.link-box
+            a(href=page.href)= page.title
+      div
+        a(href="http://github.com/friendsofrobinsonstatepark") 
+          i.fa.fa-github
+          | &nbsp;Contribute

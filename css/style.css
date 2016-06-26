@@ -1,0 +1,202 @@
+@import url(http://fonts.googleapis.com/css?family=Arvo|Cabin|Lobster+Two:700italic);
+html,
+body {
+  font-family: Cabin, sans-serif;
+  width: 100%;
+  margin: 0px;
+  padding: 0px;
+  background-color: #371f13;
+}
+.banner {
+  background-color: #524018;
+  background: url(/wood.jpg);
+  margin: 0px;
+  display: block;
+  min-height: 100px;
+  position: relative;
+}
+a:hover {
+  text-decoration: none;
+}
+.banner h1 {
+  font-family: 'Lobster Two', cursive;
+  font-weight: 700;
+  font-style: italic;
+  display: block;
+  margin: 0px;
+  color: #CCFF99;
+  margin-left: 6px;
+  padding-top: 12px;
+}
+.banner h1 a {
+  color: #CCFF99;
+  text-decoration: none;
+}
+.banner h1 a:hover {
+  text-decoration: none;
+}
+h1 {
+  font-family: 'Lobster Two', cursive;
+  font-weight: 700;
+  font-style: italic;
+  text-align: center;
+}
+h2 {
+  text-align: center;
+}
+.gallery h1 {
+  text-shadow: 0px 0px 5px white;
+  font-size: 400%;
+}
+.gallery .header {
+  position: absolute;
+  left: 0px;
+  right: 0px;
+  text-align: center;
+}
+ul.navigation {
+  list-style-type: none;
+  margin: auto;
+  width: 100%;
+  text-align: center;
+  font-family: Arvo, serif;
+  color: white;
+  padding: 0px;
+  border-bottom: 3px solid ivory;
+}
+.list-group-item-heading small {
+  margin-left: 8px;
+}
+ul.navigation li {
+  margin: 0px;
+  padding: 0px 4px;
+}
+ul.navigation li a {
+  background-color: rgba(255, 255, 255, 0.3);
+  font-variant: small-caps;
+  text-align: center;
+  font-size: 18px;
+  margin: 0px;
+  padding: 4px;
+  color: white;
+}
+ul.navigation li.active a {
+  background-color: rgba(255, 255, 255, 0.6);
+}
+h1.mobile {
+  display: none;
+}
+/** mobile devices */
+@media all and (max-width: 520px) {
+  ul.navigation li a {
+    width: 100%;
+  }
+  .banner h1:not(.mobile) {
+    display: none;
+  }
+  .banner h1.mobile {
+    display: inline;
+  }
+  .gallery .header {
+    /*display: none;*/
+    font-size: 10px;
+  }
+  .gallery .header a.btn {
+    display: none;
+  }
+}
+@media all and (min-width: 520px) {
+  ul.navigation li a {
+    width: 100px;
+    -webkit-border-top-left-radius: 4px;
+    -webkit-border-top-right-radius: 4px;
+    -moz-border-radius-topleft: 4px;
+    -moz-border-radius-topright: 4px;
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
+  }
+  ul.navigation li {
+    display: inline-block;
+  }
+  ul.navigation {
+    position: absolute;
+    bottom: 0px;
+  }
+  .gallery {
+    height: 300px;
+  }
+}
+ul.navigation li a:hover {
+  color: #333;
+  background-color: ivory;
+  color: black;
+  text-decoration: none;
+}
+.gallery {
+  margin: 0px;
+  overflow: hidden;
+  border-bottom: 8px solid #320;
+  position: relative;
+}
+.gallery img.art {
+  width: 100%;
+  /*position: absolute;*/
+  bottom: 0px;
+}
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: Arvo, serif;
+  margin-top: 2px;
+}
+.container-fluid {
+  width: 100%;
+  margin: 0;
+  padding: 16px 50px;
+  background-color: #ec9;
+  background-image: url('/natural-paper.png');
+}
+.index-col {
+  border-radius: 8px;
+  box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.3);
+  padding: 16px;
+  background-color: ivory;
+  margin-bottom: 8px;
+}
+.index-col h2 {
+  text-transform: uppercase;
+  text-align: center;
+}
+.news .col-md-12 {
+  text-align: center;
+}
+.news .index-col {
+  max-width: 700px;
+  margin: auto;
+  margin-top: 18px;
+  text-align: left;
+}
+.news h1 {
+  text-align: center;
+}
+.banner.footer {
+  text-align: center;
+  padding: 16px;
+  color: white;
+  border-top: 3px solid ivory;
+  font-size: 16px;
+}
+.banner.footer a {
+  color: white;
+}
+.banner.footer a:hover {
+  color: #ccc;
+}
+.banner.footer .link-box:not(:first-child)::before {
+  content: ' | ';
+}
+#map {
+  border-bottom: 3px solid #320;
+}

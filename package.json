@@ -1,0 +1,30 @@
+{
+  "name": "friendsofrobinsonstatepark.site",
+  "version": "0.1.0",
+  "description": "Website for Friends of Robinson State Park",
+  "main": "gulpfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/friendsofrobinsonstatepark/site.git"
+  },
+  "author": "Ryan Muller <ryan+gh@muller.io>",
+  "license": "CC-BY-SA-4.0",
+  "bugs": {
+    "url": "https://github.com/friendsofrobinsonstatepark/site/issues"
+  },
+  "homepage": "https://github.com/friendsofrobinsonstatepark/site",
+  "dependencies": {
+    "connect": "^3.0.1",
+    "gulp": "^3.8.2",
+    "gulp-entity-convert": "0.0.1",
+    "gulp-jade": "^0.6.0",
+    "gulp-less": "^3.0.3",
+    "marked": "^0.3.3"
+  },
+  "devDependencies": {
+    "shelljs": "^0.5.1"
+  }
+}
